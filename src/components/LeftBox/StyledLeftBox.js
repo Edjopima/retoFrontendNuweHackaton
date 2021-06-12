@@ -34,6 +34,9 @@ const StyledLeftBox = styled.div`
   .corner{
     align-self: flex-end;
   }
+  @media only screen and (max-width: 950px) {
+    display:none;
+  }
 `;
 
 export default StyledLeftBox;

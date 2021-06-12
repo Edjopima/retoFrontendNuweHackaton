@@ -1,10 +1,11 @@
 import React from 'react';
-import Home from './containers/Home/Home';
+import RegisterContainer from './containers/Register/RegisterContainer';
+
 
 const App = () => {
   return (
     <div className="app">
-      <Home />
+      <RegisterContainer />
     </div>
   );
 }

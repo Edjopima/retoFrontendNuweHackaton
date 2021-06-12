@@ -1,17 +1,14 @@
 import React from 'react';
-import LeftBox from '@components/LeftBox/LeftBox'
-import StyledHome from './StyledHome'
+import StyledRegisterOptionSelect from './StyledRegisterOptionSelect';
 import BigButton from '@components/BigButton/BigButton';
 import userIcon from '@icons/user.png'
 import polygon from '@icons/Polygon 3-1.png'
 import briefcase from '@icons/briefcase.png'
 import polygon2 from '@icons/Polygon 3.png'
 
-const Home = () => {
+const RegisterOptionSelect = ({nextStep}) => {
   return (
-    <StyledHome>
-      <LeftBox />
-      <div className="content-container">
+    <StyledRegisterOptionSelect>
         <p className='header'>Ya tienes cuenta? <strong>Inicia sesión</strong></p>
         <div className="center-box">
           <h1 className='title'>¡Únete a la comunidad!</h1>
@@ -22,6 +19,7 @@ const Home = () => {
             title='Developers'
             message='Cuenta personas para entrar en el mundo dev'
             type='primary'
+            nextStep={nextStep}
           />
           <BigButton 
             icon={briefcase}
@@ -31,9 +29,8 @@ const Home = () => {
             type='secondary'
           />
         </div>
-      </div>
-    </StyledHome>
+    </StyledRegisterOptionSelect>
   );
 }
 
-export default Home;
+export default RegisterOptionSelect;
