@@ -1,0 +1,17 @@
+{
+  "name": "retofrontendnuwehackaton",
+  "version": "1.0.0",
+  "description": "Reto desarrollado para el hackaton de nuwe del 12/06/2021",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "hackaton",
+    "hackathon",
+    "javascript"
+  ],
+  "author": "Eduardo Piña",
+  "license": "MIT"
+}
