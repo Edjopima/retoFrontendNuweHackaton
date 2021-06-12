@@ -17,6 +17,8 @@ module.exports = {
     extensions: ['.js', '.jsx'],
     alias: {
       '@components': path.resolve(__dirname, 'src/components/'),
+      '@icons': path.resolve(__dirname,'/src/assets/icons/'),
+      '@images' : path.resolve(__dirname,'src/assets/images')
     }
   },
   mode: 'production',
@@ -41,6 +43,10 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.png/,
+        type: "asset/resource"
       }
     ]
   },
