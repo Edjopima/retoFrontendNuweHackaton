@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const StyledButton = styled.button`
   width: 426px;
   height: 54px;
+  cursor:pointer;
   background-color: ${props=>props.case==='primary'? '#4F934A': 'white'};
   border-radius: 6px;
   color:${props=>props.case==='primary'? 'white': 'black'};

@@ -43,6 +43,7 @@ const StyledModal=styled.div`
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
+    cursor:pointer;
   }
   .button2{
     color:white;
