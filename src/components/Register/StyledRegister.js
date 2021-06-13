@@ -154,13 +154,6 @@ const StyledRegister = styled.div`
   .footer svg{
     padding-right:16px;
   }
-
-  @media only screen and (max-width: 950px) {
-    width:100%;
-    .header{
-      margin-bottom:80px;
-    }
-  }
   .select{
     width: 100%;
     height: 52px;
@@ -174,6 +167,59 @@ const StyledRegister = styled.div`
     margin-bottom:10px;
     background:white;
     padding:0 30px;
+  }
+  .google{
+    margin-right:63px;
+    margin-left:45px; 
+  }
+  @media only screen and (max-width: 950px) {
+    width:100%;
+    .header{
+      margin-bottom:80px;
+    }
+    .input{
+      width:266px;
+    }
+    .select{
+      width:326px;
+    }
+    .header {
+      width:85%;
+      margin:20px 20px;
+    }
+
+    .back-button{
+      font-size:14px;
+    }
+    .back-button span {
+      margin-left:10px
+    }
+    .step-box{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      font-size:12px;
+    }
+    .form-container{
+      padding:5px;
+      diplay:flex;
+      flex-direction:column;
+      width:326px;
+    }
+    .title{
+      font-size: 24px;
+    }
+    .subtitle{
+      font-size:14px;
+      width:326px;
+    }
+    .google{
+      margin-right:31px;
+      margin-left:25px; 
+    }
+    .number-input{
+      width: 300px;
+    }
   }
 `;
 

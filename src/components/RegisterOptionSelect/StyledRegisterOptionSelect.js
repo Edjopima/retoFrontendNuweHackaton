@@ -29,9 +29,9 @@ const StyledRegisterOptionSelect = styled.div`
     padding-top:150px;
   .header {
     position:absolute;
-    bottom:200px;
+    bottom:15%;
     margin:0;
-    right:200px;
+    right:25%;
   }
 }`;
 

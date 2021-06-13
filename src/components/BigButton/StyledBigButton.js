@@ -56,6 +56,17 @@ const StyledBigButton = styled.div`
     color:#4F934A;
     margin-right:36px;
   }
+  @media only screen and (max-width: 950px) {
+    .container{
+      width:380px;
+    }
+    .icon-container{
+      width:66px;
+    }
+    .icon{
+      display:none;
+    }
+  }
 `;
 
 export default StyledBigButton;

@@ -51,6 +51,20 @@ const StyledModal=styled.div`
     width:380px;
     margin-right:80px;
   }
+  @media only screen and (max-width: 950px) {
+    .modal{
+      width:320px;
+      height:250px;
+      padding:20px;
+    }
+    button{
+      width:100px;
+    }
+    .button2{
+      width:180px;
+      margin-right:10px;
+    }
+  }
 `
 
 export default StyledModal;

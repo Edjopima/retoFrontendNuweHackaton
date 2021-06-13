@@ -16,6 +16,9 @@ const StyledButton = styled.button`
   display:flex;
   align-items:center;
   ${props=>props.case==='primary'? 'justify-content:center;': ''}
+  @media only screen and (max-width: 950px) {
+    width:326px;
+  }
 `;
 
 export default StyledButton;

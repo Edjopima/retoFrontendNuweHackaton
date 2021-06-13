@@ -52,7 +52,7 @@ const StepOne = ({nextStep,values,setValues, handleOpenModal}) => {
           <div></div>
         </div>
         <StyledButton case="google" onClick={() => handleOpenModal('notFound')}>
-          <img src={google} alt="google" style={{marginRight:'63px',marginLeft:'45px'}} />
+          <img src={google} alt="google" className='google'/>
           Registrate con Google
         </StyledButton>
     </div>
