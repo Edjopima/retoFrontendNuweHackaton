@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const BigButton = (props) => {
-  const { icon,title,message,iconBackground,type, nextStep} = props;
+  const { icon,title,message,iconBackground,type, nextStep, handleOpenModal} = props;
   return (
-    <StyledBigButton iconBackground={iconBackground} type={type} onClick={nextStep}>
+    <StyledBigButton iconBackground={iconBackground} type={type} onClick={nextStep?nextStep:()=>handleOpenModal('notFound')}>
       <div className={`container ${type}`} >
         <div className="icon-container">
           <img src={icon} alt="icon" className="icon" />

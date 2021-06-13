@@ -161,6 +161,20 @@ const StyledRegister = styled.div`
       margin-bottom:80px;
     }
   }
+  .select{
+    width: 100%;
+    height: 52px;
+    border: 1px solid #8692A6;
+    border-radius:6px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #494949;
+    outline:none;
+    margin-bottom:10px;
+    background:white;
+    padding:0 30px;
+  }
 `;
 
 export default StyledRegister;

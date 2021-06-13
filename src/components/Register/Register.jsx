@@ -4,11 +4,39 @@ import StepOne from './StepOne';
 import StepTwo from './StepTwo';
 import StepThree from './StepThree';
 import RegisterOptionSelect from '../RegisterOptionSelect/RegisterOptionSelect';
+import Modal from '../Modal/Modal';
 
 const Register = () => {  
+  const initialState = {
+    name:'',
+    email:'',
+    password:'',
+    phoneNumber:'',
+    address:'',
+    country:'',
+    creditCard:'',
+    cardCode:'',
+    checked:false
+  }
   const [step, setStep] = useState(0);
+  const [values, setValues] = useState(initialState)
+  const [openModal, setOpenModal] = useState(false);
+  const [modalContent, setModalContent] = useState('notFound')
+  const closeModal = () => {
+    if (modalContent==='success'){
+      setStep(0);
+      setValues(initialState)
+    }
+    setOpenModal(false);
+  }
+  const handleOpenModal = (content) => {
+    setModalContent(content);
+    setOpenModal(true)
+  }
+
   const nextStep = () => {
     if (step === 3) {
+      handleOpenModal('success');
       return
     } 
     setStep(step+1);
@@ -17,19 +45,41 @@ const Register = () => {
   const prevStep = () => {
     if (step === 0) {
       return
-    } 
+    }
+    if (step === 1){
+      setValues(initialState)
+      setStep(step-1);
+      return
+    }
     setStep(step-1);
   }
 
+
   const steps = [
-    {number:0,text:'Home', page:<RegisterOptionSelect nextStep={()=>nextStep()} prevStep={()=>prevStep()} />},
-    {number:1,text:'Personal Info.',page:<StepOne nextStep={()=>nextStep()} />},
-    {number:2,text:'Localización',page:<StepTwo nextStep={()=>nextStep()} />},
-    {number:3,text:'Verificación por tarjeta',page:<StepThree nextStep={()=>nextStep()} />},
+    {
+      number:0,
+      text:'Home', 
+      page:<RegisterOptionSelect nextStep={()=>nextStep()} prevStep={()=>prevStep()} handleOpenModal={handleOpenModal} />
+    },
+    {
+      number:1,
+      text:'Personal Info.',
+      page:<StepOne nextStep={()=>nextStep()} values={values} setValues={setValues} handleOpenModal={handleOpenModal}/>
+    },
+    {
+      number:2,
+      text:'Localización',
+      page:<StepTwo nextStep={()=>nextStep()} values={values} setValues={setValues} />
+    },
+    {
+      number:3,
+      text:'Verificación por tarjeta',
+      page:<StepThree nextStep={()=>nextStep()} values={values} setValues={setValues} handleOpenModal={handleOpenModal}/>},
   ];
 
   return (    
-    (step === 0) ? 
+    <>
+{      (step === 0) ? 
       steps[0].page
       :
       <StyledRegister>
@@ -46,8 +96,9 @@ const Register = () => {
         </div>
       </div>
       {steps[step].page}
-    </StyledRegister>
-
+    </StyledRegister>}
+    {openModal?<Modal closeModal={closeModal} content={modalContent}/> :''}
+    </>
   );
 }
 

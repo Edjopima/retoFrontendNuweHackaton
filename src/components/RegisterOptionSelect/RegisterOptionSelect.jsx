@@ -6,7 +6,7 @@ import polygon from '@icons/Polygon 3-1.png'
 import briefcase from '@icons/briefcase.png'
 import polygon2 from '@icons/Polygon 3.png'
 
-const RegisterOptionSelect = ({nextStep}) => {
+const RegisterOptionSelect = ({nextStep,handleOpenModal}) => {
   return (
     <StyledRegisterOptionSelect>
         <p className='header'>Ya tienes cuenta? <strong>Inicia sesión</strong></p>
@@ -27,6 +27,7 @@ const RegisterOptionSelect = ({nextStep}) => {
             title='Business'
             message='Tienes o perteneces a una compañía'
             type='secondary'
+            handleOpenModal={handleOpenModal}
           />
         </div>
     </StyledRegisterOptionSelect>
